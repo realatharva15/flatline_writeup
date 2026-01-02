@@ -20,7 +20,9 @@ this does not look good, let us use the -Pn flag to skip the host discovery step
 nmap -Pn <target_ip>
 ```
 PORT     STATE SERVICE
+
 3389/tcp open  ms-wbt-server
+
 8021/tcp open  ftp-proxy
 
 alright so we have two ports open, lets use the -sV and -sC flags to check out what version these services are running
