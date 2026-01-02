@@ -33,8 +33,11 @@ nmap -sC -sV -p 3389,8021 <target_ip> -Pn
 note: you can only access these services using the -Pn flag!
 
 PORT	STATE	SERVICE	VERSION
+
 3389/tcp	open	ms-wbt-server	Microsoft Terminal Services
+
 8021/tcp	open	freeswitch-event	FreeSWITCH mod_event_socket
+
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 after doing some research using deepseek i found out that the port 8021 is out primary attack vector for getting initial access.
