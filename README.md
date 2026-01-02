@@ -2,7 +2,7 @@
 # Author: Atharva Bordavekar
 # Difficulty: Easy
 # Points: 60
-# Vulnerabilities: default credentials, rce, SeImpersonatePrivilege abuse, insecure file permissions
+# Vulnerabilities: default credentials, RCE, SeImpersonatePrivilege abuse, insecure file permissions
 
 # Reconnaisance:
 
