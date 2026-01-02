@@ -4,7 +4,7 @@
 # Points: 60
 # Vulnerabilities: 
 
-#Reconnaisance:
+# Reconnaisance:
 
 nmap scan:
 ```bash
@@ -30,22 +30,9 @@ nmap -sC -sV -p 3389,8021 <target_ip> -Pn
 ```
 note: you can only access these services using the -Pn flag!
 
-PORT     STATE SERVICE          VERSION
-3389/tcp open  ms-wbt-server    Microsoft Terminal Services
-| ssl-cert: Subject: commonName=WIN-EOM4PK0578N
-| Not valid before: 2026-01-01T11:09:15
-|_Not valid after:  2026-07-03T11:09:15
-| rdp-ntlm-info: 
-|   Target_Name: WIN-EOM4PK0578N
-|   NetBIOS_Domain_Name: WIN-EOM4PK0578N
-|   NetBIOS_Computer_Name: WIN-EOM4PK0578N
-|   DNS_Domain_Name: WIN-EOM4PK0578N
-|   DNS_Computer_Name: WIN-EOM4PK0578N
-|   Product_Version: 10.0.17763
-|_  System_Time: 2026-01-02T11:32:48+00:00
-|_ssl-date: 2026-01-02T11:32:52+00:00; 0s from scanner time.
-
-8021/tcp open  freeswitch-event FreeSWITCH mod_event_socket
+PORT	STATE	SERVICE	VERSION
+3389/tcp	open	ms-wbt-server	Microsoft Terminal Services
+8021/tcp	open	freeswitch-event	FreeSWITCH mod_event_socket
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 after doing some research using deepseek i found out that the port 8021 is out primary attack vector for getting initial access.
